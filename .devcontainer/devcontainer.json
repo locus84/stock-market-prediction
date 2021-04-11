@@ -1,0 +1,5 @@
+{
+    "name": "Upbit-bot-ShrotTerm DevContainer",
+    "dockerFile": "../Dockerfile",
+    "extensions": ["natqe.reload", "njpwerner.autodocstring", "ms-python.vscode-pylance"],
+  }

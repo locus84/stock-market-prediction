@@ -7,7 +7,8 @@ Created on Thu Feb 22 21:14:43 2018
 
 import numpy as np
 import matplotlib.pyplot as plt
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior() 
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils import shuffle
