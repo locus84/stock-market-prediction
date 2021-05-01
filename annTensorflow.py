@@ -8,6 +8,7 @@ Created on Thu Feb 22 21:14:43 2018
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow.compat.v1 as tf
+
 tf.disable_v2_behavior() 
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
@@ -89,12 +90,12 @@ print(test_x.shape)
 
 # Define the important parameters and variable to work with the tensors
 learning_rate = 0.5
-training_epochs = 1000
+training_epochs = 1
 cost_history = np.empty(shape=[1], dtype=float)
 n_dim = X.shape[1]
 print("n_dim", n_dim)
 n_class = 2
-model_path = "C:\\Users\\shaiv\\Documents\\Stock market\\TensorFlow\\NMI"
+model_path = "saved_model/NMI"
 
 # Define the number of hidden layers and number of neurons for each layer
 n_hidden_1 = 60
@@ -181,7 +182,7 @@ for epoch in range(training_epochs):
     
 save_path = saver.save(sess, model_path)
 print("Model saved in file: %s" % save_path)
-print("Accuracy: ", (sess.run(accuracy, feed_dict={x: test_x, y_: test_y})))
+# print("Accuracy: ", (sess.run(accuracy, feed_dict={x: test_x, y_: test_y})))
 #plot mse and accuracy graph
 
 plt.plot(mse_history, 'r')
